@@ -8,7 +8,8 @@
     <style>
         div{
             background-color: red;
-            font-size: 28px;
+            font-size: 14px;
+           
         }
     </style>
 </head>
