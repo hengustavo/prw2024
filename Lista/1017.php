@@ -1,59 +1,12 @@
 <?php
-
-    $valor = readline();
     
-    $valortotal = $valor;
-    $cem = 0;
-    $cinquenta = 0;
-    $vinte = 0;
-    $dez = 0;
-    $cinco = 0;
-    $dois = 0;
-    $um = 0;
+    $tempo = intval(readline());
+    $velocidade = intval(readline());
     
-    while($valor >= 100)
-    {
-        $valor = $valor - 100;
-        $cem++;
-    }
-    while($valor >= 50)
-    {
-        $valor = $valor - 50;
-        $cinquenta++;
-    }
-    while($valor >= 20)
-    {
-        $valor = $valor - 20;
-        $vinte++;
-    }
-    while($valor >= 10)
-    {
-        $valor = $valor - 10;
-        $dez++;
-    }
-    while($valor >= 5)
-    {
-        $valor = $valor - 5;
-        $cinco++;
-    }
-    while($valor >= 2)
-    {
-        $valor = $valor - 2;
-        $dois++;
-    }
-    while($valor >= 1)
-    {
-        $valor = $valor - 1;
-        $um++;
-    }
+    $distancia = $tempo * $velocidade;
     
-    echo $valortotal."\n";
-    echo $cem." nota(s) de R$ 100,00\n";
-    echo $cinquenta." nota(s) de R$ 50,00\n";
-    echo $vinte." nota(s) de R$ 20,00\n";
-    echo $dez." nota(s) de R$ 10,00\n";
-    echo $cinco." nota(s) de R$ 5,00\n";
-    echo $dois." nota(s) de R$ 2,00\n";
-    echo $um." nota(s) de R$ 1,00\n";
+    $litros = $distancia / 12;
+    
+    echo number_format($litros,3,'.','')."\n";
 
 ?>
